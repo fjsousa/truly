@@ -3,8 +3,8 @@ var sqlite3 = require('sqlite3');
 var app = express();
 var cors = require('cors');
 var join = require('path').join;
-var logfmt = require("logfmt");
-app.use(logfmt.requestLogger());
+// var logfmt = require("logfmt");
+// app.use(logfmt.requestLogger());
 app.use(cors());
 app.configure(function(){
   app.use(express.bodyParser());
@@ -72,6 +72,4 @@ app.post('/lite', function (req, res) {
 });
 
 var port = process.env.PORT || 5000;
-app.listen(port, function (){
-  console.log('Listening on port:', port);
-});
+app.listen(port);
