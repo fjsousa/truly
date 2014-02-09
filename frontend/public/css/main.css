@@ -26,13 +26,23 @@ body {
 .text-light {
   color: #dbeef4;
 }
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6,
+body p,
+body label,
+body a {
+  color: #31859c;
+}
+.logo-home {
+  margin-top: 50px;
+  width: 400px;
+}
 .navbar {
   background-color: #31859c;
-}
-p,
-label,
-a {
-  color: #31859c;
 }
 .circle {
   color: #31859c;

@@ -3,7 +3,6 @@
 @dark: #31859c;
 
 
-
 html,body {
     height: 100%;
     background-color: @light;
@@ -25,7 +24,6 @@ html,body {
         margin: 20px 0;
     }
 }
-
 .text-dark {
   color: @dark;
 }
@@ -35,13 +33,20 @@ html,body {
 
 // Customize
 
+body {
+  h1, h2, h3, h4, h5, h6, p, label, a {
+      color: @dark;
+  }
+}
+.logo-home {
+  margin-top: 50px;
+  width: 400px;
+}
+
 .navbar {
   background-color: @dark;
 }
 
-p, label, a {
-    color: @dark;
-}
 .circle {
     color: @dark;
 }
