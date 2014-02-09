@@ -1,3 +1,6 @@
 *.txt
 *.jpg
 node_modules
+localdb
+log
+oldweb.js
