@@ -85,3 +85,29 @@ body button.btn-default:hover {
   margin-top: 30px;
   height: 500px;
 }
+.donation {
+  margin-top: 10px;
+  background-color: #31859c;
+}
+.donation .col-xs-6 {
+  padding-left: 0px;
+}
+.donation h1,
+.donation h2,
+.donation h3,
+.donation h4,
+.donation h5,
+.donation h6,
+.donation p,
+.donation label,
+.donation a {
+  color: #dbeef4;
+}
+.donation h4,
+.donation p {
+  margin-bottom: 0px;
+  margin-top: 5px;
+}
+.donnation-pic {
+  height: 70px;
+}
