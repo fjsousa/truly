@@ -37,6 +37,14 @@ body label,
 body a {
   color: #31859c;
 }
+body button.btn-default {
+  background-color: #31859c;
+  color: #dbeef4;
+}
+body button.btn-default:hover {
+  background-color: #dbeef4;
+  color: #31859c;
+}
 .logo-home {
   margin-top: 50px;
   width: 400px;
