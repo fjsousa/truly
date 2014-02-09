@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<!--
+ 
+ Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements.  See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership.  The ASF licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License.  You may obtain a copy of the License at
+ 
+ http://www.apache.org/licenses/LICENSE-2.0
+ 
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied.  See the License for the
+ specific language governing permissions and limitations
+ under the License.
+ 
+ -->
+
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,height=device-height,user-scalable=no,maximum-scale=1.0,initial-scale=1.0" />
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8"> <!-- ISO-8859-1 -->
+            <title>Cordova Mobile Spec</title>
+            <link rel="stylesheet" href="master.css" type="text/css" media="screen" title="no title" charset="utf-8">
+                <script type="text/javascript" charset="utf-8" src="cordova-incl.js"></script>
+
+                    <script src="js/jquery-2.1.0.min.js"></script>
+                    <script src="js/bootstrap.min.js"></script>
+                    <script type="text/javascript" src="phonegap.js"></script>
+                    <link href="css/bootstrap.min.css" rel="stylesheet">
+                        <link href="css/main-mobile.css" rel="stylesheet">
+                            <link href="css/font-awesome-4.0.3/css/font-awesome.css" rel="stylesheet">
+              
+                <script type="text/javascript" charset="utf-8">
+                    
+                    var pictureSource;   // picture source
+                    var destinationType; // sets the format of returned value
+                    
+                    // Wait for device API libraries to load
+                    //
+                    document.addEventListener("deviceready",onDeviceReady,false);
+                    
+                    // device APIs are available
+                    //
+                    function onDeviceReady() {
+                        pictureSource=navigator.camera.PictureSourceType;
+                        destinationType=navigator.camera.DestinationType;
+                    }
+                
+                // Called when a photo is successfully retrieved
+                //
+                function onPhotoDataSuccess(imageData) {
+                    // Uncomment to view the base64-encoded image data
+                    // console.log(imageData);
+                    
+                    // Get image handle
+                    //
+                    var smallImage = document.getElementById('smallImage');
+                    //alert('success');
+                    // Unhide image elements
+                    //
+                    smallImage.style.display = 'block';
+                    
+                    // Show the captured photo
+                    // The in-line CSS rules are used to resize the image
+                    //
+                    //smallImage.src = "data:image/jpeg;base64," + imageData;
+                    
+                    //document.body.style.background = "'url(data:image/jpeg;base64," + imageData + "')";
+                    
+                    //document.body.style.background = url('data:image/jpeg;base64,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');
+                    
+                    document.location = 'register-shoe.html';
+                }
+                
+                // Called when a photo is successfully retrieved
+                //
+                function onPhotoURISuccess(imageURI) {
+                    // Uncomment to view the image file URI
+                    // console.log(imageURI);
+                    
+                    // Get image handle
+                    //
+                    var largeImage = document.getElementById('largeImage');
+                    
+                    // Unhide image elements
+                    //
+                    largeImage.style.display = 'block';
+                    
+                    // Show the captured photo
+                    // The in-line CSS rules are used to resize the image
+                    //
+                    largeImage.src = imageURI;
+                }
+                
+                // A button will call this function
+                //
+                function capturePhoto() {
+                    // Take picture using device camera and retrieve image as base64-encoded string
+                    navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50,
+                                                destinationType: destinationType.DATA_URL });
+                }
+                
+                // A button will call this function
+                //
+                function capturePhotoEdit() {
+                    // Take picture using device camera, allow edit, and retrieve image as base64-encoded string
+                    navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 20, allowEdit: true,
+                                                destinationType: destinationType.DATA_URL });
+                }
+                
+                // A button will call this function
+                //
+                function getPhoto(source) {
+                    // Retrieve image file location from specified source
+                    navigator.camera.getPicture(onPhotoURISuccess, onFail, { quality: 50,
+                                                destinationType: destinationType.FILE_URI,
+                                                sourceType: source });
+                }
+                
+                // Called if something bad happens.
+                //
+                function onFail(message) {
+                    alert('Failed because: ' + message);
+                }
+                
+                    </script>
+            </head>
+    <body>
+        <!-- Wrap all page content here -->
+        <div id="wrap">
+            
+            <!-- Begin page content -->
+            <div class="container">
+                <div="row">
+                    <div class=".col-md-12">
+                        <form role="form">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="Enter name">
+                                    </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="Enter email">
+                                    </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <img src="" id="smallImage"></img>
+        </div><!-- Wrap Div end -->
+        
+        <div id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <p class="text-center next-button">
+                        <a href="javascript:capturePhoto();">
+                            <div class="fontbutton">
+                                <i class="text-center fa fa-arrow-circle-right fa-5x circle"></i>
+                            </div>
+                        </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </body>
+</html>
+
