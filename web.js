@@ -32,7 +32,7 @@ app.post('/create', function (req, res) {
   if (!req.body) {
     return res.send(409, 'No content in body');
   }
-  console.log('Create');
+  console.log('\nCreate');
 
   var email = req.body.email;
   var name = req.body.name;
@@ -46,7 +46,10 @@ app.post('/create', function (req, res) {
   var query = 'select count(*) from person where email = "' + email + '"';
 
   connection.query(query, function(err, rows, fields) {
-    if (err) { res.send(500, err);}
+    if (err) { 
+      console.log('Error: select count',err);
+      res.send(500, err);
+    }
 
     var mailCount = rows[0]['count(*)'];
     console.log('Received request. Mail # in db:', mailCount);
@@ -58,13 +61,19 @@ app.post('/create', function (req, res) {
         '"' + email + '");';
 
       connection.query(query, function(err, rows, fields) {
-        if (err) { res.send(500, err);}
+        if (err) {
+          console.log('Error: creating person',err);
+          res.send(500, err);
+        }
 
         console.log('Created Person');
 
         query = 'insert into shoe (personid,img,gender,size,type,org,local) values((select id from person where email = "' + email + '"),"' + img+ '","' + gender + '",' + size + ',"' + type + '","' + org +'","' + local +'");';
         connection.query(query, function(err, rows, fields) {
-          if (err) { res.send(500, err);}
+          if (err) {
+            console.log('Error: inserting shoe in new person',err);
+            res.send(500, err);
+          }
 
           console.log('Introduced a shoe in new person');
 
@@ -77,7 +86,10 @@ app.post('/create', function (req, res) {
       query = 'insert into shoe (personid,img,gender,size,type,org,local) values((select id from person where email = "' + email + '"),"' + img+ '","' + gender + '",' + size + ',"' + type + '","' + org +'","' + local +'");';
 
       connection.query(query, function(err, rows, fields) {
-        if (err) { res.send(500, err);}
+        if (err) { 
+          console.log('Error: inserting shoe in existing person',err);
+          res.send(500, err);
+        }
 
         console.log('Introduced a shoe in existing person');
         res.send(200);
