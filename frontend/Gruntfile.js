@@ -7,12 +7,14 @@ module.exports = function(grunt) {
     less: {
       development: {
         files: {
-          "public/css/main.css": "src/less/main.less"
+          "public/css/main.css": "src/less/main.less",
+          "public/css/main-mobile.css": "src/less/main-mobile.less"
         }
       },
       production: {
         files: {
-          "public/css/main.css": "src/less/main.less"
+          "public/css/main.css": "src/less/main.less",
+          "public/css/main-mobile.css": "src/less/main-mobile.less"
         }
       }
     },

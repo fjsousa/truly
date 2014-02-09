@@ -1,0 +1,43 @@
+html,
+body {
+  height: 100%;
+  background-color: #dbeef4;
+}
+#wrap {
+  min-height: 100%;
+  height: auto;
+  margin: 0 auto -120px;
+  padding: 50px 0 100px;
+}
+#footer {
+  height: 80px;
+}
+.container {
+  width: auto;
+  max-width: 100%;
+  padding: 0 15px;
+}
+.container .credit {
+  margin: 20px 0;
+}
+.text-dark {
+  color: #31859c;
+}
+.text-light {
+  color: #dbeef4;
+}
+.navbar {
+  background-color: #31859c;
+}
+p,
+label,
+a {
+  color: #31859c;
+}
+.circle {
+  color: #31859c;
+}
+.header-bar {
+  background-color: #31859c;
+  height: 80px;
+}
