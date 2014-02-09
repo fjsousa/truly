@@ -1,5 +1,11 @@
 create
 curl -X POST http://95.85.10.232:5000/create -d '{"name":"ana","email":"maria@gmail.com","type":"sapatilha","gender":"masculino","size":45,"org":"casa do povo","local":"amadora","img":"HHHHHHH1X"}' -H "content-type: application/json"
 
+if ok: 200
+if err: 500 
+
 -ask
 curl -X POST http://95.85.10.232:5000/ask -d '{"email":"maria@gmail.com"}' -H "content-type: application/json"
+
+if ok: json string
+if err: 500
