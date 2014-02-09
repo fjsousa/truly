@@ -3,6 +3,8 @@ var sqlite3 = require('sqlite3');
 var app = express();
 var cors = require('cors');
 var join = require('path').join;
+var logfmt = require("logfmt");
+app.use(logfmt.requestLogger());
 app.use(cors());
 app.configure(function(){
   app.use(express.bodyParser());
