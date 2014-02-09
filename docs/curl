@@ -1,0 +1,1 @@
+curl -X POST http://95.85.10.232:5000/create -d '{"name":"ana","email":"maria@gmail.com","type":"sapatilha","gender":"masculino","size":45,"org":"casa do povo","local":"amadora","img":"HHHHHHH1X"}' -H "content-type: application/json"
