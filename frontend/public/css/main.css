@@ -49,8 +49,20 @@ body button.btn-default:hover {
   margin-top: 50px;
   width: 400px;
 }
+.logo-header {
+  height: 50px;
+}
+.truly-map {
+  position: absolute;
+  top: 73px;
+}
 .navbar {
   background-color: #31859c;
+}
+.navbar i {
+  color: #dbeef4;
+  margin-top: 10px;
+  margin-left: 20px;
 }
 .circle {
   color: #31859c;
