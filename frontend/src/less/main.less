@@ -3,7 +3,6 @@
 @dark: #31859c;
 
 
-
 html,body {
     height: 100%;
     background-color: @light;
@@ -25,7 +24,6 @@ html,body {
         margin: 20px 0;
     }
 }
-
 .text-dark {
   color: @dark;
 }
@@ -35,13 +33,41 @@ html,body {
 
 // Customize
 
-.navbar {
-  background-color: @dark;
+body {
+  h1, h2, h3, h4, h5, h6, p, label, a {
+      color: @dark;
+  }
+  button.btn-default {
+    background-color: @dark;
+    color: @light;
+    &:hover {
+      background-color: @light;
+      color: @dark;
+    }
+  }
+}
+.logo-home {
+  margin-top: 50px;
+  width: 400px;
+}
+.logo-header {
+  height: 50px;
 }
 
-p, label, a {
-    color: @dark;
+.truly-map {
+  position: absolute;
+  top: 73px;
 }
+
+.navbar {
+  background-color: @dark;
+  i {
+    color: @light;
+    margin-top: 10px;
+    margin-left: 20px;
+  }
+}
+
 .circle {
     color: @dark;
 }

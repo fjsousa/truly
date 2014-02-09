@@ -1,11 +1,10 @@
 <html>
 <head>
   <title></title>
-  <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
-  <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet">
-  <link href="//netdna.bootstrapcdn.com/bootswatch/3.1.0/simplex/bootstrap.min.css" rel="stylesheet">
-  <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
-  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+  <script src="js/jquery-2.1.0.min.js"></script>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <script src="js/bootstrap.min.js"></script>
+  <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="../css/main.css" rel="stylesheet">
 </head>
 <body>
@@ -20,11 +19,41 @@
       <div class="container">
 
         <div class="row">
-          <div class="col-md-6">
-            <img class="" src="img/truly.-logo.png">
+          <div class="col-sm-6">
+            <img class="logo-home img-responsive" src="img/truly.-logo.png">
           </div>
-          <div class="col-md-6">
-          
+          <div class="col-sm-6">
+            <img class="logo-home img-responsive tuly-map" src="img/truly-map.png">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-offset-1 col-sm-5">
+            <h1 class="lead">
+              <strong>Congratulations!<br>You are a Truly certified donor.</strong>
+            </h1>
+            <p>Connect with the Truly community<br>and take a look at the new life of your former stuff.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-offset-1 col-sm-5">
+            <form role="form">
+              <div class="form-group">
+                <input type="email" class="form-control" id="email" placeholder="Your email">
+              </div>
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <input type="password" class="form-control" id="password" placeholder="Your password">
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <input type="password" class="form-control" id="password-conf" placeholder="Confirmation">
+                  </div>
+                </div>
+              </div>
+              <button type="button" class="btn btn-default btn-block">Sign Up</button>
+            </form>
           </div>
         </div>
       </div>
