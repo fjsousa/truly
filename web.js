@@ -58,22 +58,20 @@ app.post('/create', function (req, res) {
     });
 
 });
-  
 
-  // var query =
-  //   'insert into shoeTable (name, email, tag, type, gender, size, org, local)' +
-  //   'VALUES('+
-  //     '"' + name+ '",'+
-  //     '"' + email+ '",'+
-  //     '"' + tag+ '",'+
-  //     '"' + type+ '",'+
-  //     '"' + gender+ '",'+
-  //     '"' + size+'",'+
-  //     '"' + org+ '",'+
-  //     '"' + local+
-  //     '");';
+app.post('/ask', function (req, res) {
+  if (!req.body)
+    return res.send(409, 'No content in body');
 
+  var email = req.body.email;
 
+  var query = 'SELECT * FROM shoe JOIN person ON person.id=shoe.personid WHERE person.email="' + email +'";';
+
+  connection.query(query, function(err, rows, fields) {
+    if (err) throw err;
+    res.send(rows);
+  });
+});
 
 var port = process.env.PORT || 5000;
 app.listen(port, function (){
