@@ -26,6 +26,9 @@ body {
 .text-light {
   color: #dbeef4;
 }
+body h1 {
+  margin-top: 40px;
+}
 body h1,
 body h2,
 body h3,
@@ -36,6 +39,7 @@ body p,
 body label,
 body a {
   color: #31859c;
+  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 }
 body button.btn-default {
   background-color: #31859c;
@@ -51,6 +55,12 @@ body button.btn-default:hover {
 }
 .logo-header {
   height: 50px;
+}
+.truly-side-simbol {
+  float: right;
+  margin-top: 25px;
+  height: 200px;
+  text-align: center;
 }
 .truly-map {
   position: absolute;
@@ -70,4 +80,8 @@ body button.btn-default:hover {
 .header-bar {
   background-color: #31859c;
   height: 50px;
+}
+#map-canvas {
+  margin-top: 30px;
+  height: 500px;
 }

@@ -1,11 +1,17 @@
 <html>
 <head>
   <title></title>
+  <!-- jquery / bootstrap -->
   <script src="js/jquery-2.1.0.min.js"></script>
-  <link href="css/bootstrap.min.css" rel="stylesheet">
   <script src="js/bootstrap.min.js"></script>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- map -->
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+  <script src="js/map.js"></script>
+  <!-- font awesome -->
   <link href="css/font-awesome.min.css" rel="stylesheet">
-  <link href="../css/main.css" rel="stylesheet">
+  <!-- style -->
+  <link href="css/main.css" rel="stylesheet">
 </head>
 <body>
     <!-- Wrap all page content here -->
@@ -33,41 +39,18 @@
       <!-- Begin page content -->
       <div class="container">
         <div class="row">
-          <div class="col-sm-6">
-            <img class="logo-home img-responsive" src="img/truly.-logo.png">
+          <div class="col-sm-8">
+            <h1>Check out your Truly map!</h1>
           </div>
-          <div class="col-sm-6">
-            <img class="logo-home img-responsive truly-map" src="img/truly-map.png">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-offset-1 col-sm-5">
-            <h1 class="lead">
-              <strong>Congratulations!<br>You are a Truly certified donor.</strong>
-            </h1>
-            <p>Connect with the Truly community<br>and take a look at the new life of your former stuff.</p>
+          <div class="col-sm-4">
           </div>
         </div>
         <div class="row">
-          <div class="col-sm-offset-1 col-sm-5">
-            <form role="form">
-              <div class="form-group">
-                <input type="email" class="form-control" id="email" placeholder="Your email">
-              </div>
-              <div class="row">
-                <div class="col-sm-6">
-                  <div class="form-group">
-                    <input type="password" class="form-control" id="password" placeholder="Your password">
-                  </div>
-                </div>
-                <div class="col-sm-6">
-                  <div class="form-group">
-                    <input type="password" class="form-control" id="password-conf" placeholder="Confirmation">
-                  </div>
-                </div>
-              </div>
-              <button type="button" class="btn btn-default btn-block">Sign Up</button>
-            </form>
+          <div class="col-sm-8">
+            <div id="map-canvas"></div>
+          </div>
+          <div class="col-sm-4">
+            <img class="truly-side-simbol" src="img/truly-simbol.png">
           </div>
         </div>
       </div>
