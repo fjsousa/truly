@@ -1,3 +1,10 @@
+// Action                      HTTP method  Relative URI
+// Get a list of all projects  GET          /api/projects
+// Get a project by ID         GET          /api/projects/id
+// Create a new project        POST         /api/projects
+// Update a project            PUT          /api/projects/id
+// Delete a project            DELETE       /api/projects/id
+
 var express = require('express');
 var app = express();
 var cors = require('cors');
@@ -16,8 +23,8 @@ app.get('/welcome', function (req, res) {
 
 var connection = mysql.createConnection({
   host     : 'localhost',
-  user     : 'root',
-  password : '',
+  user     : 'truly',
+  password : 'truly',
   database: 'shoes'
 });
 
